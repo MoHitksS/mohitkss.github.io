@@ -1,36 +1,45 @@
 import backgroundImage from '../Resources/Images/backgroundHome.jpg'
 import styled from 'styled-components'
-import React from 'react'
+import React, { useState } from 'react'
 
+let check = false
 const Navbar = () => {
+
+    const [colorChange, setColorchange] = useState(false);
+    check = colorChange;
+    const changeNavbarColor = () =>{
+       if(window.scrollY >= 80){
+         setColorchange(true);
+       }
+       else{
+         setColorchange(false);
+       }
+    };
+    window.addEventListener('scroll', changeNavbarColor);
+
     return (
-        <Container>
-            <div className='navbar_box'>
-                <header className="header">
-                    <a href="" className="logo">Mohit</a>
+        <Container >
+                <header className="header" style={{backgroundColor:`${check?'white':'transparent'}`}}>
+                    <a href="/" className="logo">Mohit</a>
                     <input className="menu-btn" type="checkbox" id="menu-btn" />
                     <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
                     <ul className="menu">
-                        <li><a href="#work">Home</a></li>
+                        <li><a href="#Home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#careers">Skills</a></li>
-                        <li><a href="#contact">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </header>
-            </div>
-        </Container>
+         </Container>
     )
+    
 }
 // #52d081
 const Container = styled.div`
     width:100%;
     height:70px;
     background-image: url(${backgroundImage});
-    .navbar_box{
-        width:82%;
-        margin:auto;
-    }
 
     a {
         color: #000;
@@ -39,8 +48,8 @@ const Container = styled.div`
     /* header */
     
     .header {
-        position: fixed;
-        width:80%;
+        position:fixed;
+        width:100%;
         z-index: 3;
         padding-top:10px;
     }
@@ -50,6 +59,7 @@ const Container = styled.div`
         padding: 0;
         list-style: none;
         overflow: hidden;
+        padding-right:50px;
     }
     
     .header li a {
@@ -59,10 +69,10 @@ const Container = styled.div`
     }
     
     .header .logo {
-        display: block;
+        display: flex;
         float: left;
         font-size: 2em;
-        padding: 10px 20px;
+        padding: 10px 30px;
         text-decoration: none;
         color:#343a40;
     }

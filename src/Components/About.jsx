@@ -9,7 +9,7 @@ import { saveAs } from 'file-saver';
 
 const About = () => {
 
-    const saveFile = () =>{
+    const saveFile = () => {
         saveAs(
             `${Resume}`,
             `Mohit Sharma_Resume.pdf`
@@ -17,7 +17,7 @@ const About = () => {
     }
 
     return (
-        <Container>
+        <Container id="about">
             <div className='aboutBox'>
                 <div className='about_leftBox'>
                     <h1>Hi, I'm Mohit Sharma.</h1>
@@ -69,7 +69,7 @@ const Container = styled.div`
     
     .about_leftBox button{
         padding:12px 20px 12px 20px;
-        border-radius:8px;
+        border-radius:10px;
         border:1px solid #01a479;
         background:#01a479;
         color:white;
@@ -81,8 +81,10 @@ const Container = styled.div`
     }
 
     .about_leftBox button:hover{
-        color:#01a479;
-        background-color:white;
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
     }
 
     .about_rightBox{
@@ -103,7 +105,7 @@ const Container = styled.div`
         overflow:hidden;
     }
 
-    @media only screen and (min-width: 480px) and (max-width:768px){
+    @media only screen and (min-width: 481px) and (max-width:768px){
         height:450px;
         .aboutBox{
             height:100%;
@@ -191,10 +193,6 @@ const Container = styled.div`
         .about_rightBox>div{
             width:200px;
             height:200px;
-            margin:auto;
-            border-radius:100%;
-            background-color:white;
-            overflow:hidden;
         }
 
     }
@@ -238,10 +236,6 @@ const Container = styled.div`
         .about_rightBox>div{
             width:150px;
             height:150px;
-            margin:auto;
-            border-radius:100%;
-            background-color:white;
-            overflow:hidden;
         }
 
     }
@@ -286,10 +280,6 @@ const Container = styled.div`
         .about_rightBox>div{
             width:150px;
             height:150px;
-            margin:auto;
-            border-radius:100%;
-            background-color:white;
-            overflow:hidden;
         }
 
     }
