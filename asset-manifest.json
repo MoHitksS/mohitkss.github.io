@@ -1,8 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.1945f43c.css",
-    "main.js": "/static/js/main.f6bd81b9.js",
+    "main.js": "/static/js/main.20a37d77.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/fitnessBlender.png": "/static/media/fitnessBlender.e88781ee409d55fde4cc.png",
+    "static/media/ESPN.png": "/static/media/ESPN.4cda4678bac06bc7e370.png",
+    "static/media/kfc.png": "/static/media/kfc.b43660a5a7e1671d37a1.png",
     "static/media/profilePic.jpg": "/static/media/profilePic.da6188a05f79e15ba9b6.jpg",
     "static/media/react.png": "/static/media/react.22d1f2096ed82cab7a8a.png",
     "static/media/Mohit_Sharma_Resume.pdf": "/static/media/Mohit_Sharma_Resume.14fd2b94728e4a9c1129.pdf",
@@ -17,11 +20,11 @@
     "static/media/mern.png": "/static/media/mern.b58d81727b47466a7cda.png",
     "index.html": "/index.html",
     "main.1945f43c.css.map": "/static/css/main.1945f43c.css.map",
-    "main.f6bd81b9.js.map": "/static/js/main.f6bd81b9.js.map",
+    "main.20a37d77.js.map": "/static/js/main.20a37d77.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1945f43c.css",
-    "static/js/main.f6bd81b9.js"
+    "static/js/main.20a37d77.js"
   ]
 }
