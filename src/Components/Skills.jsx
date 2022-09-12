@@ -51,7 +51,7 @@ const Skills = () => {
     ]
 
   return (
-    <Container>
+    <Container id='skills'>
         <h1>Skills</h1>
         <div className='skillsContainer'>
             {skills.map((ele,index)=>(

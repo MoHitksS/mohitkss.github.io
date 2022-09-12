@@ -1,6 +1,7 @@
 import React from 'react'
 import About from '../Components/About'
 import Navbar from '../Components/Navbar'
+import Projects from '../Components/Projects'
 import Skills from '../Components/Skills'
 
 const Homepage = () => {
@@ -9,6 +10,7 @@ const Homepage = () => {
             <Navbar />
             <About />
             <Skills/>
+            <Projects/>
         </>
     )
 }

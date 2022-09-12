@@ -1,22 +1,35 @@
 import backgroundImage from '../Resources/Images/backgroundHome.jpg'
 import styled from 'styled-components'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-let check = false
+
 const Navbar = () => {
 
     const [colorChange, setColorchange] = useState(false);
-    check = colorChange;
+    const [head, setHead] = useState(false);
+    const [check,setCheck] = useState(false);
+    
     const changeNavbarColor = () =>{
        if(window.scrollY >= 80){
          setColorchange(true);
+         
        }
        else{
          setColorchange(false);
+         setHead(false);
        }
+       
     };
     window.addEventListener('scroll', changeNavbarColor);
 
+    useEffect(()=>{
+        if(head || colorChange ){
+            setCheck(true)
+        }else{
+            setCheck(false);
+        }
+        
+    },[head,colorChange])
     return (
         <Container >
                 <header className="header" style={{backgroundColor:`${check?'white':'transparent'}`}}>
@@ -24,11 +37,11 @@ const Navbar = () => {
                     <input className="menu-btn" type="checkbox" id="menu-btn" />
                     <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
                     <ul className="menu">
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/"  onClick={() => setHead(true)}>Home</a></li>
+                        <li><a href="#about"  onClick={() => setHead(true)}>About</a></li>
+                        <li><a href="#skills" onClick={() => setHead(true)}>Skills</a></li>
+                        <li><a href="#projects" onClick={() => setHead(true)}>Projects</a></li>
+                        <li><a href="#contact" onClick={() => setHead(true)}>Contact</a></li>
                     </ul>
                 </header>
          </Container>
