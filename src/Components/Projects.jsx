@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import kfc from '../Resources/Images/Project/kfc.png';
-import FitnessBlender from '../Resources/Images/Project/fitnessBlender.png';
-import ESPN from '../Resources/Images/Project/ESPN.png';
-import { Link } from 'react-router-dom';
+import kfc from '../Resources/Images/Project/kfc.jpeg';
+import FitnessBlender from '../Resources/Images/Project/fitnessBlender.jpeg';
+import ESPN from '../Resources/Images/Project/ESPN.jpeg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import StreamIcon from '@mui/icons-material/Stream';
 const Projects = () => {
@@ -42,19 +41,19 @@ const Projects = () => {
                 {projects.map((ele, index) => (
                     <div key={index} className="box">
                         <div className='imgBox'>
-                            <img src={ele.img} alt={ele.title} width='100%' height='350px' />
+                            <img src={ele.img} alt={ele.title} width='100%' />
                         </div>
                         <div className='ContentBox'>
                             <h1>{ele.title}</h1>
                             <p>{ele.desc}</p>
                             <div className='tagsBox'>
-                                {ele.tags.map((tag,index) => (
+                                {ele.tags.map((tag, index) => (
                                     <span key={index}>{tag}</span>
                                 ))}
                             </div>
                             <div className='linkSection'>
-                                <a href={ele.githubLink}><button><GitHubIcon/>Github</button></a>
-                                <a href={ele.deployedLink}><button><StreamIcon/>Live</button></a>
+                                <a href={ele.githubLink}><button><GitHubIcon />Github</button></a>
+                                <a href={ele.deployedLink}><button><StreamIcon />Live</button></a>
                             </div>
                         </div>
                     </div>
@@ -71,7 +70,6 @@ const Container = styled.div`
     display:flex;
     flex-direction:column;
     gap:20px;
-
     
     h1{
         color:#01a479;
@@ -79,27 +77,44 @@ const Container = styled.div`
     }
 
     .projectsContainer{
-        width:82%;
+        width:60%;
         margin:auto;
-        
+        display:flex;
+        align-items:center;
+        flex-direction:column;
     }
 
     .box{
+        position:relative;
         width:100%;
+        height:550px;
         display:flex;
-        justify-content:center;
         gap:10px;
         margin-bottom:100px;
         border:1px solid red;
         border-radius: 20px;
-        border: 10px solid #01a479;
+        border: 10px solid #e9e9e9;
         overflow:hidden;
     }
 
     .imgBox{
         width:50%;
-        
+        overflow:hidden;
     }
+
+    
+    .imgBox>img{
+        display: block;
+        transition: transform .4s; 
+    }
+
+    .imgBox>img:hover{
+        position:absolute;
+        width:80%;
+        transform: scale(1.3);
+        transform-origin: 0% 0%;
+    }
+
 
     .ContentBox{
         width:50%;
@@ -121,11 +136,9 @@ const Container = styled.div`
         line-height:20px;
         gap:5px;
         margin-bottom:20px;
-        margin-left:-10px;
     }
 
     .tagsBox>span{
-        margin-left:10px;
         color:white;
         background-color:#01a479;
         padding: 5px 20px 5px 20px;
@@ -135,7 +148,7 @@ const Container = styled.div`
 
     .linkSection{
         display:flex;
-        gap:30px;
+        gap:20px;
     }
 
     .linkSection>a{
@@ -170,22 +183,44 @@ const Container = styled.div`
     @media only screen and (min-width: 481px) and (max-width:768px){
         .box{
            flex-direction:column;
+           align-items:center;
+           height:100%;
         }
 
+        .projectsContainer{
+            width:80%;
+            margin:auto;
+            
+        }
+        
         .imgBox{
             width:100%;
+            height:200px;
         }
+
         .imgBox>img{
             width:100%;
-            height:350px;
         }
+
         .ContentBox{
             width:80%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+        }
+
+        .ContentBox>h1{
+            font-size:x-large;
+        }
+
+        .ContentBox>p{
+            font-size:15px;
         }
 
         .tagsBox{
-            width:70%;
-            
+            width:100%;
+            justify-content:center;
         }
        
     }
@@ -193,71 +228,91 @@ const Container = styled.div`
     @media only screen and (min-width:320px) and (max-width:480px){
         .box{
             flex-direction:column;
-         }
-
-         .imgBox{
-            width:100%;
+            align-items:center;
+            height:100%;
         }
 
-        .ContentBox>h1{
-            font-size:x-large;
-        }
-
-        .imgBox>img{
-            width:100%;
-            height:250px;
-        }
-        .ContentBox{
-            width:80%;
-        }
-
-        .tagsBox{
+        .projectsContainer{
             width:90%;
+            margin:auto;
             
-        }
-
-    }
-
-    @media only screen and (max-width: 320px){
-        .box{
-            flex-direction:column;
         }
 
         .imgBox{
             width:100%;
+            height:200px;
+        }
+
+        .imgBox>img{
+            width:100%;
+        }
+
+        .ContentBox{
+            width:80%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
         }
 
         .ContentBox>h1{
             font-size:large;
         }
 
-        .imgBox>img{
-            width:100%;
-            height:250px;
+        .ContentBox>p{
+            font-size:13px;
         }
-    
-        .ContentBox{
-            width:80%;
-        }
+
 
         .tagsBox{
             width:100%;
-            
+            justify-content:center;
         }
-    }
 
+    }
 
     @media only screen and (max-width: 319px){
         .box{
             flex-direction:column;
-         }
+            align-items:center;
+            height:100%;
+        }
 
-         .imgBox{
+        .projectsContainer{
+            width:90%;
+            margin:auto;
+            
+        }
+
+        .imgBox{
+            width:100%;
+            height:150px;
+        }
+
+        .imgBox>img{
             width:100%;
         }
-    
+
         .ContentBox{
             width:80%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+        }
+
+        .ContentBox>h1{
+            font-size:large;
+        }
+
+        .ContentBox>p{
+            font-size:13px;
+        }
+
+
+        .tagsBox{
+            width:100%;
+            justify-content:center;
         }
     }
    

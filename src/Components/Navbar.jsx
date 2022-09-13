@@ -7,16 +7,13 @@ const Navbar = () => {
 
     const [colorChange, setColorchange] = useState(false);
     const [head, setHead] = useState(false);
-    const [check,setCheck] = useState(false);
-    
     const changeNavbarColor = () =>{
-       if(window.scrollY >= 80){
+       if(window.scrollY >= 80 || head){
          setColorchange(true);
          
        }
        else{
          setColorchange(false);
-         setHead(false);
        }
        
     };
@@ -24,15 +21,14 @@ const Navbar = () => {
 
     useEffect(()=>{
         if(head || colorChange ){
-            setCheck(true)
+            setColorchange(true)
         }else{
-            setCheck(false);
+            setColorchange(false)
         }
-        
     },[head,colorChange])
     return (
         <Container >
-                <header className="header" style={{backgroundColor:`${check?'white':'transparent'}`}}>
+                <header className="header" style={{backgroundColor:`${colorChange?'white':'transparent'}`}}>
                     <a href="/" className="logo">Mohit</a>
                     <input className="menu-btn" type="checkbox" id="menu-btn" />
                     <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
