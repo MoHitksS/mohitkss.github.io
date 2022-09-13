@@ -55,10 +55,6 @@ const Projects = () => {
                         <div className='ContentBox'>
                             <h1>{ele.title}</h1>
                             <p>{ele.desc}</p>   
-                            <ul className='keyPointsSection'>
-                                <li>{ele.keyPoint1?ele.keyPoint1:null}</li>
-                                <li>{ele.keyPoint2?ele.keyPoint2:null}</li>
-                            </ul>
                             <p style={{fontWeight:'bold'}}>{ele.worked}</p>
                             <div className='tagsBox'>
                                 {ele.tags.map((tag, index) => (
@@ -101,7 +97,7 @@ const Container = styled.div`
     .box{
         position:relative;
         width:100%;
-        height:550px;
+        height:450px;
         display:flex;
         gap:10px;
         margin-bottom:100px;
@@ -129,13 +125,7 @@ const Container = styled.div`
         transform-origin: 0% 0%;
     }
 
-    ul{
-        display:flex;
-        align-items:flex-start;
-        flex-direction:column;
-        text-align:left;
-        gap:10px;
-    }
+    
     .ContentBox{
         width:50%;
         text-align:left;
@@ -248,9 +238,7 @@ const Container = styled.div`
             justify-content:center;
         }
 
-        .keyPointsSection{
-            display:none;
-        }
+       
     }
 
     @media only screen and (min-width:320px) and (max-width:480px){
@@ -298,10 +286,7 @@ const Container = styled.div`
             justify-content:center;
         }
 
-        .keyPointsSection{
-            display:none;
-            margin-bottom:0px;
-        }
+       
     }
 
     @media only screen and (max-width: 319px){
@@ -349,9 +334,7 @@ const Container = styled.div`
             justify-content:center;
         }
 
-        .keyPointsSection{
-            display:none;
-        }
+        
     }
    
    
