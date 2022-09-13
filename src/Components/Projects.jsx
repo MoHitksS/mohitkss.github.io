@@ -87,7 +87,7 @@ const Container = styled.div`
     }
 
     .projectsContainer{
-        width:60%;
+        width:70%;
         margin:auto;
         display:flex;
         align-items:center;
@@ -156,8 +156,9 @@ const Container = styled.div`
     .tagsBox>span{
         color:white;
         background-color:#01a479;
-        padding: 5px 20px 5px 20px;
+        padding: 2px 15px 2px 15px;
         border-radius:10px;
+        font-size:13px;
     }
 
 
@@ -195,6 +196,50 @@ const Container = styled.div`
         gap:10px;
     }
 
+    @media only screen and (min-width: 768px) and (max-width:1120px){
+        .box{
+            flex-direction:column;
+            align-items:center;
+            height:100%;
+         }
+ 
+         .projectsContainer{
+             width:80%;
+             margin:auto;
+             
+         }
+         
+         .imgBox{
+             width:100%;
+             height:350px;
+         }
+ 
+         .imgBox>img{
+             width:100%;
+         }
+ 
+         .ContentBox{
+             width:80%;
+             display:flex;
+             align-items:center;
+             justify-content:center;
+             flex-direction:column;
+         }
+ 
+         .ContentBox>h1{
+             font-size:x-large;
+         }
+ 
+         .ContentBox>p{
+             font-size:15px;
+         }
+ 
+         .tagsBox{
+             width:100%;
+             justify-content:center;
+         }
+    }
+
     @media only screen and (min-width: 481px) and (max-width:768px){
         .box{
            flex-direction:column;
@@ -210,7 +255,7 @@ const Container = styled.div`
         
         .imgBox{
             width:100%;
-            height:200px;
+            height:350px;
         }
 
         .imgBox>img{
@@ -240,6 +285,7 @@ const Container = styled.div`
 
        
     }
+
 
     @media only screen and (min-width:320px) and (max-width:480px){
         .box{

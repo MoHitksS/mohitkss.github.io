@@ -78,7 +78,7 @@ const Container = styled.div`
         width:85%;
         margin:auto;
         display:grid;
-        grid-template-columns: repeat(auto-fit,minmax(130px,max-content));
+        grid-template-columns: repeat(auto-fit,minmax(120px,max-content));
         justify-content:center;
         padding:30px;
         gap:20px;
