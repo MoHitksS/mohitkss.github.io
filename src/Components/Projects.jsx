@@ -87,7 +87,7 @@ const Container = styled.div`
     }
 
     .projectsContainer{
-        width:70%;
+        width:80%;
         margin:auto;
         display:flex;
         align-items:center;
