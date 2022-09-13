@@ -12,6 +12,9 @@ const Projects = () => {
             title: 'KFC Clone',
             img: kfc,
             desc: 'KFC, a subsidiary of Yum! Brands, Inc. (NYSE: YUM.), is a global chicken restaurant brand with a rich, decades-long history of success and innovation.',
+            worked:'A collaborative project, built in 5days by a team of 5 developers.',
+            keyPoint2:'Our food is always craveable. We are the original fried chicken experts, and everything we do celebrates our passion for serving finger lickin good food.',
+            keyPoint1:'KFC stores are located in more than 105 countries and were first opened in 1930.',
             githubLink: 'https://github.com/MoHitksS/KFC-india/',
             deployedLink: 'https://kfc-online-india.netlify.app/',
             tags: ['HTML', 'CSS', 'Javascript']
@@ -20,6 +23,9 @@ const Projects = () => {
             title: 'Fitness Blender Clone',
             img: FitnessBlender,
             desc: 'Fitness Blender provides hundreds of workouts, healthy recipes, relaxing meditations, and expert articles, for a whole body and mind approach to feeling great.',
+            worked:'A collaborative project, built in 4 days by a team of 5 developers.',
+            keyPoint1:'Exercise with certified personal trainers whether you’re at home or on the road.',
+            keyPoint2:'Professionally designed programs take the guesswork out of exercising.',
             githubLink: 'https://github.com/MoHitksS/vengeful-thrill-8133',
             deployedLink: 'https://fitness-blender.netlify.app/',
             tags: ['HTML', 'CSS', 'Javascript']
@@ -28,6 +34,9 @@ const Projects = () => {
             title: 'ESPNcrickInfo Clone',
             img: ESPN,
             desc: 'Find Live Cricket Scores, Match updates, Fixtures, Results, News, Articles, Video highlights only at ESPNcricinfo. Read Ball by Ball Commentary',
+            worked:'This is a individual project which is only created by me in 4 days.',
+            keyPoint2:'Find interactive analysis of cricket stats and records only on ESPNcricinfo.com.',
+            keyPoint1:'ESPNcricinfo is available to cricket fans through the online media and on a host of mobile platforms and handheld devices.',
             githubLink: 'https://github.com/MoHitksS/rugged-driving-9905',
             deployedLink: 'https://espncrickinfoin.netlify.app/',
             tags: ['HTML', 'CSS', 'Javascript', 'React', 'Chakra UI']
@@ -45,7 +54,12 @@ const Projects = () => {
                         </div>
                         <div className='ContentBox'>
                             <h1>{ele.title}</h1>
-                            <p>{ele.desc}</p>
+                            <p>{ele.desc}</p>   
+                            <ul className='keyPointsSection'>
+                                <li>{ele.keyPoint1?ele.keyPoint1:null}</li>
+                                <li>{ele.keyPoint2?ele.keyPoint2:null}</li>
+                            </ul>
+                            <p style={{fontWeight:'bold'}}>{ele.worked}</p>
                             <div className='tagsBox'>
                                 {ele.tags.map((tag, index) => (
                                     <span key={index}>{tag}</span>
@@ -115,7 +129,13 @@ const Container = styled.div`
         transform-origin: 0% 0%;
     }
 
-
+    ul{
+        display:flex;
+        align-items:flex-start;
+        flex-direction:column;
+        text-align:left;
+        gap:10px;
+    }
     .ContentBox{
         width:50%;
         text-align:left;
@@ -125,11 +145,16 @@ const Container = styled.div`
 
     .ContentBox>h1{
         color:#343a40;
-        margin-bottom:0px;
+    }
+
+    .ContentBox>p{
+        width:90%;
+        font-size:large;
+        margin-top:0px;
     }
 
     .tagsBox{
-        width:50%;
+        width:80%;
         display:flex;
         align-items:center;
         flex-wrap: wrap;
@@ -222,7 +247,10 @@ const Container = styled.div`
             width:100%;
             justify-content:center;
         }
-       
+
+        .keyPointsSection{
+            display:none;
+        }
     }
 
     @media only screen and (min-width:320px) and (max-width:480px){
@@ -261,6 +289,7 @@ const Container = styled.div`
 
         .ContentBox>p{
             font-size:13px;
+            
         }
 
 
@@ -269,6 +298,10 @@ const Container = styled.div`
             justify-content:center;
         }
 
+        .keyPointsSection{
+            display:none;
+            margin-bottom:0px;
+        }
     }
 
     @media only screen and (max-width: 319px){
@@ -291,6 +324,7 @@ const Container = styled.div`
 
         .imgBox>img{
             width:100%;
+            
         }
 
         .ContentBox{
@@ -313,6 +347,10 @@ const Container = styled.div`
         .tagsBox{
             width:100%;
             justify-content:center;
+        }
+
+        .keyPointsSection{
+            display:none;
         }
     }
    
