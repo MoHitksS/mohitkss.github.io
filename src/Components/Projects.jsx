@@ -211,7 +211,7 @@ const Container = styled.div`
          
          .imgBox{
              width:100%;
-             height:350px;
+             height:400px;
          }
  
          .imgBox>img{
@@ -255,7 +255,7 @@ const Container = styled.div`
         
         .imgBox{
             width:100%;
-            height:350px;
+            height:280px;
         }
 
         .imgBox>img{
