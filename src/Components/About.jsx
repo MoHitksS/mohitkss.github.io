@@ -3,18 +3,18 @@ import React from 'react'
 import styled from 'styled-components'
 import myImage from '../Resources/Images/profilePic.jpg'
 import backgroundImage from '../Resources/Images/backgroundHome.jpg';
-import Resume from '../Resources/Files/Mohit_Sharma_Resume.pdf';
-import { saveAs } from 'file-saver';
+// import Resume from '../Resources/Files/Mohit_Sharma_Resume.pdf';
+// import { saveAs } from 'file-saver';
 
 
 const About = () => {
 
-    const saveFile = () => {
-        saveAs(
-            `${Resume}`,
-            `Mohit Sharma_Resume.pdf`
-        )
-    }
+    // const saveFile = () => {
+    //     saveAs(
+    //         `${Resume}`,
+    //         `Mohit Sharma_Resume.pdf`
+    //     )
+    // }
 
     return (
         <Container id="about">
@@ -22,7 +22,10 @@ const About = () => {
                 <div className='about_leftBox'>
                     <h1>Hi, I'm Mohit Sharma.</h1>
                     <p>I am A Full Stack Web Developer and i love to code and make user-friendly Websites.</p>
-                    <button onClick={saveFile}>Download CV<DownloadIcon /></button>
+                    <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
+                        <button>Download CV<DownloadIcon /></button>
+                    </a>
+
                 </div>
                 <div className='about_rightBox'>
                     <div>
@@ -104,6 +107,8 @@ const Container = styled.div`
         background-color:white;
         overflow:hidden;
     }
+
+    
 
     @media only screen and (min-width: 481px) and (max-width:768px){
         height:450px;
