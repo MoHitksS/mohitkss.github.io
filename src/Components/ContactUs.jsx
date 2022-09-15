@@ -183,7 +183,14 @@ const Container = styled.div`
         border:none;
         padding:10px 20px 10px 20px;
         border-radius:10px;
-        
+        cursor:pointer;
+    }
+
+    button:hover{
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
     }
 
     .endSection{

@@ -1,6 +1,7 @@
 import backgroundImage from '../Resources/Images/backgroundHome.jpg'
 import styled from 'styled-components'
 import React, { useEffect, useState } from 'react'
+import {Link,animateScroll} from 'react-scroll'
 
 
 const Navbar = () => {
@@ -33,11 +34,11 @@ const Navbar = () => {
                     <input className="menu-btn" type="checkbox" id="menu-btn" />
                     <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
                     <ul className="menu">
-                        <li><a href="/"  onClick={() => setHead(true)}>Home</a></li>
-                        <li><a href="#about"  onClick={() => setHead(true)}>About</a></li>
-                        <li><a href="#skills" onClick={() => setHead(true)}>Skills</a></li>
-                        <li><a href="#projects" onClick={() => setHead(true)}>Projects</a></li>
-                        <li><a href="#contact" onClick={() => setHead(true)}>Contact</a></li>
+                        <li><Link activeClass="active" to="/"  onClick={() => animateScroll.scrollToTop()} spy={true} smooth={true}>Home</Link></li>
+                        <li><Link activeClass="active" to="about"  onClick={() => setHead(true)} spy={true} smooth={true}>About</Link></li>
+                        <li><Link activeClass="active" to="skills" onClick={() => setHead(true)} spy={true} smooth={true}>Skills</Link></li>
+                        <li><Link activeClass="active" to="projects" onClick={() => setHead(true)} spy={true} smooth={true}>Projects</Link></li>
+                        <li><Link activeClass="active" to="contact" onClick={() => setHead(true)} spy={true} smooth={true}>Contact</Link></li>
                     </ul>
                 </header>
          </Container>

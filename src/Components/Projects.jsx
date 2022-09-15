@@ -181,7 +181,20 @@ const Container = styled.div`
         justify-content:center;
         gap:10px;
         border:none;
+        cursor:pointer;
     }
+
+    button{
+        cursor:pointer;
+    }
+
+    button:hover{
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
 
     .linkSection>a:last-child>button{
         background-color:#44a4be;
