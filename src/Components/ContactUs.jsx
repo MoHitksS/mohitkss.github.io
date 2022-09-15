@@ -1,29 +1,43 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components'
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Alert } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 const ContactUs = () => {
+    const [submit, setSubmit] = useState(false)
     const [data, setData] = useState({
         name: '',
         email: '',
         subject: '',
         message: ''
-    })
+    });
+
 
     const handleSubmission = (e) => {
         e.preventDefault();
         if (data.name && data.email && data.subject && data.message) {
-            emailjs.send('service_po6idda', 'template_g5erg0q', data,'Ob6YgTaYqeObolMjc')
-            .then((response) => {
-
-            }).catch((error) => {
-           
-            });
+            emailjs.send('service_po6idda', 'template_g5erg0q', data, 'Ob6YgTaYqeObolMjc')
+                .then((response) => {
+                    setSubmit(true)
+                }).catch((error) => {
+                    setSubmit(false)
+                });
         }
-    }
+    };
+
+    useEffect(() => {
+        let id = setInterval(() => {
+            setSubmit(false);
+        }, 5000)
+
+        return() =>{
+            clearInterval(id)
+        }
+    }, [submit]);
+
     return (
         <Container id='contact'>
             <div className='contact'>
@@ -56,6 +70,12 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
+                {submit && <>
+                    <div className='emailSent'>
+                        <h1 style={{ color: '#01a479' }}>Email Sent Successfully.</h1>
+                        <p>Thank you <span style={{ fontWeight: 'bold' }}>{data.name}</span>, your message has been submitted to us.</p>
+                    </div>
+                </>}
                 <div className='contactForm'>
                     <form action="" onSubmit={handleSubmission}>
                         <div>
@@ -73,13 +93,15 @@ const ContactUs = () => {
                 </div>
 
             </div>
+            <div className='endSection'>
+                <p>© 2022 Mohit. Design by Me with <FavoriteIcon sx={{ color: '#01a479' }} /></p>
+            </div>
         </Container>
     )
 }
 const Container = styled.div`
     width:100%;
     background-color:white;
-    padding-bottom:50px;
     .contact{
         width:85%;
         margin:auto;
@@ -135,11 +157,11 @@ const Container = styled.div`
     }
 
     .contactForm>form>div:last-child>textarea{
-        width:100%;
+        width:95%;
         height:175px;
         margin-bottom:30px;
         position:relative;
-        padding:5px 5px 5px 5px;
+        padding:5px 5px 5px 10px;
         border:1px solid #e9ecef;
         border-radius:8px;
     }
@@ -150,11 +172,10 @@ const Container = styled.div`
     }
 
     .contactForm>form>div:last-child>div{
-        width:100%;
+        width:95%;
         display:flex;
         align-items:center;
         justify-content:right;
-        padding-right:10px;
     }
 
     .contactForm>form>div:last-child>div>button{
@@ -165,6 +186,34 @@ const Container = styled.div`
         border-radius:10px;
         
     }
+
+    .endSection{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:70px;
+        background-color:black;
+        color:white;
+        margin-top:20px;
+    }
+    .endSection>p{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+    }
+
+    .emailSent{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+    }
+
+    .emailSent>h1,.emailSent>p{
+       margin-top:0px;
+    }
+
 
     @media only screen and (min-width: 768px) and (max-width:1120px){
         .middleSection{
@@ -226,6 +275,15 @@ const Container = styled.div`
             width:100%;
             
         }
+
+        .emailSent>h1{
+            font-size:x-large;
+        }
+
+        .emailSent>p{
+            width:80%;
+            font-size:small;
+        }
     }
 
     @media only screen and (min-width:320px) and (max-width:480px){
@@ -256,6 +314,19 @@ const Container = styled.div`
         .contactForm>form>div:last-child>div>button{
             width:100%;
             
+        }
+
+        .endSection>p{
+            font-size:15px;
+        }
+
+        .emailSent>h1{
+            font-size:large;
+        }
+
+        .emailSent>p{
+            width:70%;
+            font-size:12px;
         }
     }
 
@@ -288,6 +359,19 @@ const Container = styled.div`
             width:100%;
             
         }
+
+        .endSection>p{
+            font-size:10px;
+        }
+
+        .emailSent>h1{
+            font-size:small;
+        }
+
+        .emailSent>p{
+            width:70%;
+            font-size:10px;
+        }
     }
 
 
@@ -315,6 +399,11 @@ const Container = styled.div`
         .contactForm>form>div:last-child>div>button{
             width:100%;
             
+        }
+
+        .endSection>p{
+
+            font-size:8px;
         }
     }
     

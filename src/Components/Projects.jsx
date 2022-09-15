@@ -12,7 +12,7 @@ const Projects = () => {
             title: 'KFC Clone',
             img: kfc,
             desc: 'KFC, a subsidiary of Yum! Brands, Inc. (NYSE: YUM.), is a global chicken restaurant brand with a rich, decades-long history of success and innovation.',
-            worked:'A collaborative project, built in 5days by a team of 5 developers.',
+            worked:'A collaborative project, built in 5 days by a team of 5 developers.',
             keyPoint2:'Our food is always craveable. We are the original fried chicken experts, and everything we do celebrates our passion for serving finger lickin good food.',
             keyPoint1:'KFC stores are located in more than 105 countries and were first opened in 1930.',
             githubLink: 'https://github.com/MoHitksS/KFC-india/',
