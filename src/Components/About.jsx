@@ -44,7 +44,7 @@ const About = () => {
                     </div>
                     <div className='right'>
                         <h2>I am <span>Full Stack Web Developer</span></h2>
-                        <p>My name is Mohit Sharma, I am from Rishikesh, Uttarakhand. I have completed BTECH. I have knowledge of HTML, CSS , Javascript, React, Redux, NodeJs, MongoDB. I want to work as a Full Stack Web Developer.</p>
+                        <p>My name is Mohit Sharma, I am from Rishikesh, Uttarakhand. I have completed BTECH & have knowledge of HTML, CSS , Javascript, React, Redux, NodeJs, MongoDB. I want to work as a Full Stack Web Developer.</p>
                         <div>
                             <img src={signature} alt='Mohit_Signature' width='200px' />
                         </div>
