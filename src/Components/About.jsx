@@ -357,7 +357,7 @@ const AboutMeWrapper = styled.div`
 
     .right>h2{
         margin-bottom:0px;
-        font-size:21px;
+        font-size:20px;
     }
     .right>h2>span{
         color:#01a479;
