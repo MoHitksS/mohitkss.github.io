@@ -356,8 +356,10 @@ const AboutMeWrapper = styled.div`
     }
 
     .right>h2{
+        width:100%;
         margin-bottom:0px;
         font-size:20px;
+        text-align:left;
     }
     .right>h2>span{
         color:#01a479;
@@ -400,6 +402,9 @@ const AboutMeWrapper = styled.div`
         .right{
             width:90%;
         }
+        .right>p{
+            font-size:14px;
+        }
 
     }
 
@@ -417,6 +422,14 @@ const AboutMeWrapper = styled.div`
         .right{
             width:90%;
         }
+
+        .right>h2{
+            font-size:17px;
+        }
+
+        .right>p{
+            font-size:15px;
+        }
     }
 
     @media only screen and (max-width: 320px){
@@ -432,25 +445,14 @@ const AboutMeWrapper = styled.div`
         .right{
             width:90%;
         }
-
-    }
-
-
-    @media only screen and (max-width: 319px){
-        margin-top:20px;
-
-        .aboutSection{
-            flex-direction:column;
-            align-items:center;
+        .right>h2{
+            font-size:16px;
         }
 
-        .left{
-            width:90%;
+        .right>p{
+            font-size:13px;
         }
-        .right{
-            width:90%;
-            text-align:left;
-        }
+
     }
     
 `
