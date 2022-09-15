@@ -201,43 +201,43 @@ const Container = styled.div`
             flex-direction:column;
             align-items:center;
             height:100%;
-         }
+        }
  
-         .projectsContainer{
-             width:80%;
-             margin:auto;
-             
-         }
-         
-         .imgBox{
-             width:100%;
-             height:400px;
-         }
- 
-         .imgBox>img{
-             width:100%;
-         }
- 
-         .ContentBox{
-             width:80%;
-             display:flex;
-             align-items:center;
-             justify-content:center;
-             flex-direction:column;
-         }
- 
-         .ContentBox>h1{
-             font-size:x-large;
-         }
- 
-         .ContentBox>p{
-             font-size:15px;
-         }
- 
-         .tagsBox{
-             width:100%;
-             justify-content:center;
-         }
+        .projectsContainer{
+            width:80%;
+            margin:auto;
+            
+        }
+        
+        .imgBox{
+            width:100%;
+            height:400px;
+        }
+
+        .imgBox>img{
+            width:100%;
+        }
+
+        .ContentBox{
+            width:80%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+        }
+
+        .ContentBox>h1{
+            font-size:x-large;
+        }
+
+        .ContentBox>p{
+            font-size:15px;
+        }
+
+        .tagsBox{
+            width:100%;
+            justify-content:center;
+        }
     }
 
     @media only screen and (min-width: 481px) and (max-width:768px){
@@ -282,8 +282,6 @@ const Container = styled.div`
             width:100%;
             justify-content:center;
         }
-
-       
     }
 
 
@@ -331,8 +329,6 @@ const Container = styled.div`
             width:100%;
             justify-content:center;
         }
-
-       
     }
 
     @media only screen and (max-width: 319px){
@@ -379,10 +375,6 @@ const Container = styled.div`
             width:100%;
             justify-content:center;
         }
-
-        
     }
-   
-   
 `
 export default Projects

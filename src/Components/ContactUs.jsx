@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { Alert } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 const ContactUs = () => {
     const [submit, setSubmit] = useState(false)

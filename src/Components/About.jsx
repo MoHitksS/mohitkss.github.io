@@ -5,8 +5,6 @@ import myImage from '../Resources/Images/profilePic.jpg'
 import backgroundImage from '../Resources/Images/backgroundHome.jpg';
 // import Resume from '../Resources/Files/Mohit_Sharma_Resume.pdf';
 // import { saveAs } from 'file-saver';
-
-
 const About = () => {
 
     // const saveFile = () => {
@@ -15,13 +13,12 @@ const About = () => {
     //         `Mohit Sharma_Resume.pdf`
     //     )
     // }
-
     return (
         <Container id="about">
             <div className='aboutBox'>
                 <div className='about_leftBox'>
                     <h1>Hi, I'm Mohit Sharma.</h1>
-                    <p>I am A Full Stack Web Developer and i love to code and make user-friendly Websites.</p>
+                    <p>I Am A Full Stack Web Developer and i love to code and make user-friendly Websites.</p>
                     <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
                         <button>Download CV<DownloadIcon /></button>
                     </a>

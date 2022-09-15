@@ -44,7 +44,7 @@ const Navbar = () => {
     )
     
 }
-// #52d081
+
 const Container = styled.div`
     width:100%;
     height:70px;

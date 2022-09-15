@@ -10,7 +10,6 @@ import react from '../Resources/Images/LanguageImages/react.png'
 import reactredux from '../Resources/Images/LanguageImages/redux.png'
 import mern from '../Resources/Images/LanguageImages/mern.png'
 const Skills = () => {
-
     const skills = [
         {
             img:html,
