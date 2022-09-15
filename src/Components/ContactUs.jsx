@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
+import emailjs from '@emailjs/browser';
 import styled from 'styled-components'
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Alert } from '@mui/material';
 const ContactUs = () => {
+    const [data, setData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+
+    const handleSubmission = (e) => {
+        e.preventDefault();
+        if (data.name && data.email && data.subject && data.message) {
+            emailjs.send('service_po6idda', 'template_g5erg0q', data,'Ob6YgTaYqeObolMjc')
+            .then((response) => {
+
+            }).catch((error) => {
+           
+            });
+        }
+    }
     return (
-        <Container>
+        <Container id='contact'>
             <div className='contact'>
                 <div className='contactText'>
                     <div>
@@ -37,14 +57,14 @@ const ContactUs = () => {
                     </div>
                 </div>
                 <div className='contactForm'>
-                    <form action="">
+                    <form action="" onSubmit={handleSubmission}>
                         <div>
-                            <input type="text" placeholder='Name' />
-                            <input type="text" placeholder='Email' />
-                            <input type="text" placeholder='Subject' />
+                            <input type="text" name='name' placeholder='Name' onChange={(e) => setData({ ...data, name: e.target.value })} />
+                            <input type="email" name='email' placeholder='Email' onChange={(e) => setData({ ...data, email: e.target.value })} />
+                            <input type="text" name='subject' placeholder='Subject' onChange={(e) => setData({ ...data, subject: e.target.value })} />
                         </div>
                         <div>
-                            <input type="text" placeholder='Your Message' />
+                            <input type="text" name='message' placeholder='Your Message' onChange={(e) => setData({ ...data, message: e.target.value })} />
                             <div>
                                 <button type='submit'>Send Message</button>
                             </div>
@@ -59,7 +79,7 @@ const ContactUs = () => {
 const Container = styled.div`
     width:100%;
     background-color:white;
-    
+    padding-bottom:50px;
     .contact{
         width:85%;
         margin:auto;

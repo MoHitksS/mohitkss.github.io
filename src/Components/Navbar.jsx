@@ -155,7 +155,7 @@ const Container = styled.div`
  
     .header .menu-btn:checked ~ .menu {
         width:100%;
-        max-height: 240px;
+        max-height: 300px;
         background-color:white;
     }
     
