@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import myImage from '../Resources/Images/profilePic.jpg'
 import backgroundImage from '../Resources/Images/backgroundHome.jpg';
+import signature from '../Resources/Images/signature.png';
 // import Resume from '../Resources/Files/Mohit_Sharma_Resume.pdf';
 // import { saveAs } from 'file-saver';
 const About = () => {
@@ -14,23 +15,45 @@ const About = () => {
     //     )
     // }
     return (
-        <Container id="about">
-            <div className='aboutBox'>
-                <div className='about_leftBox'>
-                    <h1>Hi, I'm Mohit Sharma.</h1>
-                    <p>I Am A Full Stack Web Developer and i love to code and make user-friendly Websites.</p>
-                    <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
-                        <button>Download CV<DownloadIcon /></button>
-                    </a>
+        <div id="about">
+            <Container>
+                <div className='aboutBox'>
+                    <div className='about_leftBox'>
+                        <h1>Hi, I'm Mohit Sharma.</h1>
+                        <p>I am Full Stack Web Developer and i have knowledge in HTML, CSS, JS, REACT and i make user-friendly Websites.</p>
+                        <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
+                            <button>Download CV<DownloadIcon /></button>
+                        </a>
 
-                </div>
-                <div className='about_rightBox'>
-                    <div>
-                        <img src={myImage} alt="" width='100%' />
+                    </div>
+                    <div className='about_rightBox'>
+                        <div>
+                            <img src={myImage} alt="" width='100%' />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </Container>
+            </Container>
+            <AboutMeWrapper>
+                <div className='aboutSection'>
+                    <div className='left'>
+                        <h3>Personal Details</h3>
+                        <p></p>
+                        <p>Email: <span>mohitkumarsharma40@gmail.com</span></p>
+                        <p>Language: <span>English</span></p>
+                        <p>Nationality: <span>Indian</span></p>
+                    </div>
+                    <div className='right'>
+                        <h2>I am <span>Full Stack Web Developer</span></h2>
+                        <p>My name is Mohit Sharma, I am from Rishikesh, Uttarakhand. I have completed BTECH. I have knowledge of HTML, CSS , Javascript, React, Redux, NodeJs, MongoDB. I want to work as a Full Stack Web Developer.</p>
+                        <div>
+                            <img src={signature} alt='Mohit_Signature' width='200px' />
+                        </div>
+                    </div>
+                </div>
+            </AboutMeWrapper>
+        </div>
+
+
     )
 }
 
@@ -104,6 +127,7 @@ const Container = styled.div`
         background-color:white;
         overflow:hidden;
     }
+    
 
     
 
@@ -286,5 +310,155 @@ const Container = styled.div`
 
     }
 `
+const AboutMeWrapper = styled.div`
+    width:100%;
+    margin-top:-50px;
+    margin-bottom:40px;
+    .aboutSection{
+        width:80%;
+        margin:auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color:white;
+        display:flex;
+        justify-content:center;
+        padding:20px;
+        border-radius:10px;
+        gap:20px;
+    }
+    .left{
+        width:30%;
+        text-align:left;
+        background-color:#f8f9fa;
+        padding:5px 15px 5px 15px;;
+        border-radius:10px;
+    }
 
+    .left>p{
+        font-size:small;
+        font-weight:bold;
+    }
+
+    .left>p>span{
+        color:#707070 ;
+    }
+
+    .left>h3+p{
+        margin-top:0px;
+        border-top:1.5px dashed #d4dae1
+    }
+
+    .right{
+        width:70%;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:0px 10px 0px 10px;
+    }
+
+    .right>h1{
+        margin-bottom:0px;
+    }
+    .right>h2>span{
+        color:#01a479;
+        
+    }
+
+    .right>p{
+        text-align:left;
+        margin-top:-10px;
+    }
+
+    .right>div{
+        display:flex;
+        align-items:flex-start;
+        overflow:hidden;
+        margin-top:-10px;
+    }
+
+    .right>div>img{
+        margin-left:-35px;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width:1110px){
+        .left{
+            width:35%;
+        }
+
+    }
+
+    @media only screen and (min-width: 481px) and (max-width:768px){
+        margin-top:20px;
+        .aboutSection{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .left{
+            width:90%;
+        }
+        .right{
+            width:90%;
+        }
+
+    }
+
+    @media only screen and (min-width:320px) and (max-width:480px){
+ 
+        margin-top:20px;
+        .aboutSection{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .left{
+            width:90%;
+        }
+        .right{
+            width:90%;
+        }
+
+        .right>h2{
+            font-size:16px;
+        }
+
+        .right>p{
+            font-size:13px;
+        }
+    }
+
+    @media only screen and (max-width: 320px){
+        margin-top:20px;
+        .aboutSection{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .left{
+            width:90%;
+        }
+        .right{
+            width:90%;
+        }
+
+    }
+
+
+    @media only screen and (max-width: 319px){
+        margin-top:20px;
+
+        .aboutSection{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .left{
+            width:90%;
+        }
+        .right{
+            width:90%;
+            text-align:left;
+        }
+    }
+    
+`
 export default About
