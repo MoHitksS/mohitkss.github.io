@@ -281,6 +281,7 @@ const Container = styled.div`
             align-items:center;
             justify-content:center;
             flex-direction:column;
+            text-align:center;
         }
 
         .ContentBox>h1{
@@ -326,6 +327,7 @@ const Container = styled.div`
             align-items:center;
             justify-content:center;
             flex-direction:column;
+            text-align:center;
         }
 
         .ContentBox>h1{
@@ -373,6 +375,7 @@ const Container = styled.div`
             align-items:center;
             justify-content:center;
             flex-direction:column;
+            text-align:center;
         }
 
         .ContentBox>h1{
