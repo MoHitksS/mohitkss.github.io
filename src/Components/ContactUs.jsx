@@ -64,7 +64,7 @@ const ContactUs = () => {
                             <input type="text" name='subject' placeholder='Subject' onChange={(e) => setData({ ...data, subject: e.target.value })} />
                         </div>
                         <div>
-                            <input type="text" name='message' placeholder='Your Message' onChange={(e) => setData({ ...data, message: e.target.value })} />
+                            <textarea type="text" name='message' placeholder='Your Message' onChange={(e) => setData({ ...data, message: e.target.value })} />
                             <div>
                                 <button type='submit'>Send Message</button>
                             </div>
@@ -134,10 +134,14 @@ const Container = styled.div`
         margin-bottom:30px;
     }
 
-    .contactForm>form>div:last-child>input{
+    .contactForm>form>div:last-child>textarea{
+        width:100%;
         height:175px;
         margin-bottom:30px;
         position:relative;
+        padding:5px 5px 5px 5px;
+        border:1px solid #e9ecef;
+        border-radius:8px;
     }
 
     .contactForm>form>div:last-child>input::placeholder{
