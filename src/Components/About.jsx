@@ -323,7 +323,7 @@ const AboutMeWrapper = styled.div`
         justify-content:center;
         padding:20px;
         border-radius:10px;
-        gap:20px;
+        gap:10px;
     }
     .left{
         width:30%;
@@ -355,7 +355,7 @@ const AboutMeWrapper = styled.div`
         padding:0px 10px 0px 10px;
     }
 
-    .right>h1{
+    .right>h2{
         margin-bottom:0px;
     }
     .right>h2>span{
@@ -365,7 +365,7 @@ const AboutMeWrapper = styled.div`
 
     .right>p{
         text-align:left;
-        margin-top:-10px;
+        margin-top:5px;
     }
 
     .right>div{
@@ -415,14 +415,6 @@ const AboutMeWrapper = styled.div`
         }
         .right{
             width:90%;
-        }
-
-        .right>h2{
-            font-size:16px;
-        }
-
-        .right>p{
-            font-size:13px;
         }
     }
 
