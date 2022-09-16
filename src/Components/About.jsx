@@ -7,7 +7,6 @@ import signature from '../Resources/Images/signature.png';
 // import Resume from '../Resources/Files/Mohit_Sharma_Resume.pdf';
 // import { saveAs } from 'file-saver';
 const About = () => {
-
     // const saveFile = () => {
     //     saveAs(
     //         `${Resume}`,

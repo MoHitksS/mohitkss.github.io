@@ -197,7 +197,6 @@ const Container = styled.div`
         .header .menu-icon {
             display: none;
         }
-        
     }
 `
 

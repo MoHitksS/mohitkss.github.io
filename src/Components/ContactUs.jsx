@@ -21,12 +21,6 @@ const ContactUs = () => {
             emailjs.send('service_po6idda', 'template_g5erg0q', data, 'Ob6YgTaYqeObolMjc')
                 .then((response) => {
                     setSubmit(true)
-                    setData({...data,
-                        name: '',
-                        email: '',
-                        subject: '',
-                        message: ''
-                    })
                 }).catch((error) => {
                     setSubmit(false)
                     setData({...data,
@@ -42,11 +36,22 @@ const ContactUs = () => {
     useEffect(() => {
         let id = setInterval(() => {
             setSubmit(false);
+            
         }, 5000)
+
+        if(!submit){
+            setData({...data,
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            })
+        };
 
         return() =>{
             clearInterval(id)
         }
+        
     }, [submit]);
 
     return (
@@ -90,12 +95,12 @@ const ContactUs = () => {
                 <div className='contactForm'>
                     <form action="" onSubmit={handleSubmission}>
                         <div>
-                            <input type="text" name='name' placeholder='Name' onChange={(e) => setData({ ...data, name: e.target.value })} />
-                            <input type="email" name='email' placeholder='Email' onChange={(e) => setData({ ...data, email: e.target.value })} />
-                            <input type="text" name='subject' placeholder='Subject' onChange={(e) => setData({ ...data, subject: e.target.value })} />
+                            <input value={submit?'':data.name} type="text" name='name'  placeholder='Name' onChange={(e) => setData({ ...data, name: e.target.value })} />
+                            <input value={submit?'':data.email} type="email" name='email' placeholder='Email' onChange={(e) => setData({ ...data, email: e.target.value })} />
+                            <input value={submit?'':data.subject} type="text" name='subject' placeholder='Subject' onChange={(e) => setData({ ...data, subject: e.target.value })} />
                         </div>
                         <div>
-                            <textarea type="text" name='message' placeholder='Your Message' onChange={(e) => setData({ ...data, message: e.target.value })} />
+                            <textarea value={submit?'':data.message} type="text" name='message' placeholder='Your Message' onChange={(e) => setData({ ...data, message: e.target.value })} />
                             <div>
                                 <button type='submit'>Send Message</button>
                             </div>
