@@ -21,8 +21,20 @@ const ContactUs = () => {
             emailjs.send('service_po6idda', 'template_g5erg0q', data, 'Ob6YgTaYqeObolMjc')
                 .then((response) => {
                     setSubmit(true)
+                    setData({...data,
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: ''
+                    })
                 }).catch((error) => {
                     setSubmit(false)
+                    setData({...data,
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: ''
+                    })
                 });
         }
     };
