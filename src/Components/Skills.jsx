@@ -54,7 +54,7 @@ const Skills = () => {
         <h1>Skills</h1>
         <div className='skillsContainer'>
             {skills.map((ele,index)=>(
-                <div key={index}>
+                <div key={index} style={index%2!==0?{border: "4px solid #01a479"}:{border: "4px solid #e9e9e9"}}>
                     <img src={ele.img} alt={ele.title} width='70px' height='70px'/>
                     <p>{ele.title}</p>
                 </div>
