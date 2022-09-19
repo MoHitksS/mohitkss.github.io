@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1945f43c.css",
-    "main.js": "/static/js/main.8206e093.js",
+    "main.js": "/static/js/main.890f6972.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/ESPN.jpeg": "/static/media/ESPN.46060bd016704b81b3ba.jpeg",
     "static/media/fitnessBlender.jpeg": "/static/media/fitnessBlender.35dac085bbfdb3b51f2c.jpeg",
@@ -20,11 +20,11 @@
     "static/media/mern.png": "/static/media/mern.b58d81727b47466a7cda.png",
     "index.html": "/index.html",
     "main.1945f43c.css.map": "/static/css/main.1945f43c.css.map",
-    "main.8206e093.js.map": "/static/js/main.8206e093.js.map",
+    "main.890f6972.js.map": "/static/js/main.890f6972.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1945f43c.css",
-    "static/js/main.8206e093.js"
+    "static/js/main.890f6972.js"
   ]
 }
