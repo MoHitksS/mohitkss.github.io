@@ -28,7 +28,7 @@ const Navbar = () => {
         }
     },[head,colorChange])
     return (
-        <Container >
+        <Container>
                 <header className="header" style={{backgroundColor:`${colorChange?'white':'transparent'}`}}>
                     <a href="/" className="logo">Mohit</a>
                     <input className="menu-btn" type="checkbox" id="menu-btn" />
