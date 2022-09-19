@@ -5,10 +5,13 @@ import FitnessBlender from '../Resources/Images/Project/fitnessBlender.jpeg';
 import ESPN from '../Resources/Images/Project/ESPN.jpeg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import StreamIcon from '@mui/icons-material/Stream';
-const Projects = () => {
+import { useState } from 'react';
 
+const Projects = () => {
+    const [state,setState] = useState('')
     const projects = [
         {
+            id:1,
             title: 'KFC Clone',
             img: kfc,
             desc: 'KFC, a subsidiary of Yum! Brands, Inc. (NYSE: YUM.), is a global chicken restaurant brand with a rich, decades-long history of success and innovation.',
@@ -20,6 +23,7 @@ const Projects = () => {
             tags: ['HTML', 'CSS', 'Javascript']
         },
         {
+            id:2,
             title: 'Fitness Blender Clone',
             img: FitnessBlender,
             desc: 'Fitness Blender provides hundreds of workouts, healthy recipes, relaxing meditations, and expert articles, for a whole body and mind approach to feeling great.',
@@ -31,6 +35,7 @@ const Projects = () => {
             tags: ['HTML', 'CSS', 'Javascript']
         },
         {
+            id:3,
             title: 'ESPNcrickInfo Clone',
             img: ESPN,
             desc: 'Find Live Cricket Scores, Match updates, Fixtures, Results, News, Articles, Video highlights only at ESPNcricinfo. Read Ball by Ball Commentary',
@@ -44,11 +49,11 @@ const Projects = () => {
     ]
 
     return (
-        <Container id='projects'>
+        <Container id='projects' >
             <h1>Projects</h1>
             <div className='projectsContainer'>
                 {projects.map((ele, index) => (
-                    <div key={index} className="box">
+                    <div key={index} className="box" style={index%2!==0?{border: "10px solid #01a479"}:{border: "10px solid #e9e9e9"}}>
                         <div className='imgBox'>
                             <img src={ele.img} alt={ele.title} width='100%' />
                         </div>
@@ -70,7 +75,7 @@ const Projects = () => {
                 ))}
             </div>
             
-        </Container>
+        </Container >
     )
 }
 
@@ -101,10 +106,9 @@ const Container = styled.div`
         height:450px;
         display:flex;
         gap:10px;
-        margin-bottom:100px;
+        margin-bottom:80px;
         border:1px solid red;
         border-radius: 20px;
-        border: 10px solid #e9e9e9;
         overflow:hidden;
     }
 
