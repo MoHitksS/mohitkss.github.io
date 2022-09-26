@@ -7,7 +7,7 @@ const Github = () => {
         <MainContainer style={{ marginTop: "-20px" }}>
             <h1 style={{ color: "#01a479", textTransform: "uppercase" }}>Days I Worked</h1>
             <Container>
-                <GithubCalendar username='mohitkss' blockSize={15} blockMargin={5} fontSize={16} />
+                <GithubCalendar username='mohitkss'year={new Date().getFullYear()} blockSize={15} blockMargin={5} fontSize={16} />
             </Container>
         </MainContainer>
     )
