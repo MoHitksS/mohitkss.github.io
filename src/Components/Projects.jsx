@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import kfc from '../Resources/Images/Project/kfc.jpeg';
 import FitnessBlender from '../Resources/Images/Project/fitnessBlender.jpeg';
 import ESPN from '../Resources/Images/Project/ESPN.jpeg';
+import ZARA from '../Resources/Images/Project/zara.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import StreamIcon from '@mui/icons-material/Stream';
 import { useState } from 'react';
@@ -10,6 +11,16 @@ import { useState } from 'react';
 const Projects = () => {
     const [state,setState] = useState('')
     const projects = [
+        {
+            id:4,
+            title: 'ZARA ORIGINS Clone',
+            img: ZARA,
+            desc: 'Latest trends in clothing for women, men & kids at ZARA online. Find new arrivals, fashion catalogs, collections & lookbooks every week.',
+            worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
+            githubLink: 'https://github.com/MoHitksS/green-value-83/',
+            deployedLink: 'https://zara-origins.netlify.app/',
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux','Material UI','Firebase']
+        },
         {
             id:1,
             title: 'KFC Clone',
