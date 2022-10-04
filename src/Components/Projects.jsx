@@ -9,20 +9,20 @@ import StreamIcon from '@mui/icons-material/Stream';
 import { useState } from 'react';
 
 const Projects = () => {
-    const [state,setState] = useState('')
+    const [state, setState] = useState('')
     const projects = [
         {
-            id:4,
+            id: 4,
             title: 'ZARA ORIGINS Clone',
             img: ZARA,
             desc: 'Latest trends in clothing for women, men & kids at ZARA online. Find new arrivals, fashion catalogs, collections & lookbooks every week.',
             worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
             githubLink: 'https://github.com/MoHitksS/green-value-83/',
             deployedLink: 'https://zara-origins.netlify.app/',
-            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux','Material UI','Firebase']
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Firebase']
         },
         {
-            id:1,
+            id: 1,
             title: 'KFC Clone',
             img: kfc,
             desc: 'KFC, a subsidiary of Yum! Brands, Inc. (NYSE: YUM.), is a global chicken restaurant brand with a rich, decades-long history of success and innovation.',
@@ -34,7 +34,7 @@ const Projects = () => {
             tags: ['HTML', 'CSS', 'Javascript']
         },
         {
-            id:2,
+            id: 2,
             title: 'Fitness Blender Clone',
             img: FitnessBlender,
             desc: 'Fitness Blender provides hundreds of workouts, healthy recipes, relaxing meditations, and expert articles, for a whole body and mind approach to feeling great.',
@@ -46,7 +46,7 @@ const Projects = () => {
             tags: ['HTML', 'CSS', 'Javascript']
         },
         {
-            id:3,
+            id: 3,
             title: 'ESPNcrickInfo Clone',
             img: ESPN,
             desc: 'Find Live Cricket Scores, Match updates, Fixtures, Results, News, Articles, Video highlights only at ESPNcricinfo. Read Ball by Ball Commentary',
@@ -64,7 +64,7 @@ const Projects = () => {
             <h1>Projects</h1>
             <div className='projectsContainer'>
                 {projects.map((ele, index) => (
-                    <div key={index} className="box" style={index%2!==0?{border: "10px solid #01a479"}:{border: "10px solid #e9e9e9"}}>
+                    <div key={index} className="box">
                         <div className='imgBox'>
                             <img src={ele.img} alt={ele.title} width='100%' />
                         </div>
@@ -85,7 +85,6 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
-            
         </Container >
     )
 }
@@ -118,7 +117,7 @@ const Container = styled.div`
         display:flex;
         gap:10px;
         margin-bottom:80px;
-        border:1px solid red;
+        border: 10px solid #e9e9e9;
         border-radius: 20px;
         overflow:hidden;
     }
