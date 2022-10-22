@@ -5,6 +5,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const ContactUs = () => {
     const [submit, setSubmit] = useState(false)
     const [data, setData] = useState({
@@ -23,7 +24,8 @@ const ContactUs = () => {
                     setSubmit(true)
                 }).catch((error) => {
                     setSubmit(false)
-                    setData({...data,
+                    setData({
+                        ...data,
                         name: '',
                         email: '',
                         subject: '',
@@ -36,11 +38,12 @@ const ContactUs = () => {
     useEffect(() => {
         let id = setInterval(() => {
             setSubmit(false);
-            
+
         }, 5000)
 
-        if(!submit){
-            setData({...data,
+        if (!submit) {
+            setData({
+                ...data,
                 name: '',
                 email: '',
                 subject: '',
@@ -48,10 +51,10 @@ const ContactUs = () => {
             })
         };
 
-        return() =>{
+        return () => {
             clearInterval(id)
         }
-        
+
     }, [submit]);
 
     return (
@@ -62,6 +65,14 @@ const ContactUs = () => {
                         <h1>Contact Me</h1>
                     </div>
                     <div className='middleSection'>
+                        <div>
+                            <LinkedInIcon fontSize="large" />
+                            <h1>LinkedIn</h1>
+                            <p>You can contact me on LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/mohit-sharma-66176314a/" rel="noreferrer" target="_blank">
+                                <p>mohit-sharma</p>
+                            </a>
+                        </div>
                         <div>
                             <PhoneIcon fontSize="large" />
                             <h1>Phone</h1>
@@ -95,12 +106,12 @@ const ContactUs = () => {
                 <div className='contactForm'>
                     <form action="" onSubmit={handleSubmission}>
                         <div>
-                            <input value={submit?'':data.name} type="text" name='name'  placeholder='Name' onChange={(e) => setData({ ...data, name: e.target.value })} />
-                            <input value={submit?'':data.email} type="email" name='email' placeholder='Email' onChange={(e) => setData({ ...data, email: e.target.value })} />
-                            <input value={submit?'':data.subject} type="text" name='subject' placeholder='Subject' onChange={(e) => setData({ ...data, subject: e.target.value })} />
+                            <input value={submit ? '' : data.name} type="text" name='name' placeholder='Name' onChange={(e) => setData({ ...data, name: e.target.value })} />
+                            <input value={submit ? '' : data.email} type="email" name='email' placeholder='Email' onChange={(e) => setData({ ...data, email: e.target.value })} />
+                            <input value={submit ? '' : data.subject} type="text" name='subject' placeholder='Subject' onChange={(e) => setData({ ...data, subject: e.target.value })} />
                         </div>
                         <div>
-                            <textarea value={submit?'':data.message} type="text" name='message' placeholder='Your Message' onChange={(e) => setData({ ...data, message: e.target.value })} />
+                            <textarea value={submit ? '' : data.message} type="text" name='message' placeholder='Your Message' onChange={(e) => setData({ ...data, message: e.target.value })} />
                             <div>
                                 <button type='submit'>Send Message</button>
                             </div>
