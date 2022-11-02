@@ -1,49 +1,52 @@
-import backgroundImage from '../Resources/Images/backgroundHome.jpg'
+import backgroundImage from '../Resources/Images/backgroundHome.jpg';
+import DownloadIcon from '@mui/icons-material/Download';
 import styled from 'styled-components'
 import React, { useEffect, useState } from 'react'
-import {Link,animateScroll} from 'react-scroll'
+import { Link, animateScroll } from 'react-scroll'
 
 
 const Navbar = () => {
 
     const [colorChange, setColorchange] = useState(false);
     const [head, setHead] = useState(false);
-    const changeNavbarColor = () =>{
-       if(window.scrollY >= 80 || head){
-         setColorchange(true);
-         
-       }
-       else{
-         setColorchange(false);
-       }
-       
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 80 || head) {
+            setColorchange(true);
+
+        }
+        else {
+            setColorchange(false);
+        }
+
     };
     window.addEventListener('scroll', changeNavbarColor);
 
-    useEffect(()=>{
-        if(head || colorChange ){
+    useEffect(() => {
+        if (head || colorChange) {
             setColorchange(true)
-        }else{
+        } else {
             setColorchange(false)
         }
-    },[head,colorChange])
+    }, [head, colorChange])
     return (
         <Container>
-                <header className="header" style={{backgroundColor:`${colorChange?'white':'transparent'}`}}>
-                    <a href="/" className="logo">Mohit</a>
-                    <input className="menu-btn" type="checkbox" id="menu-btn" />
-                    <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
-                    <ul className="menu">
-                        <li><Link activeClass="active" to="/"  onClick={() => animateScroll.scrollToTop()} spy={true} smooth={true}>Home</Link></li>
-                        <li><Link activeClass="active" to="about"  onClick={() => setHead(true)} spy={true} smooth={true}>About</Link></li>
-                        <li><Link activeClass="active" to="skills" onClick={() => setHead(true)} spy={true} smooth={true}>Skills</Link></li>
-                        <li><Link activeClass="active" to="projects" onClick={() => setHead(true)} spy={true} smooth={true}>Projects</Link></li>
-                        <li><Link activeClass="active" to="contact" onClick={() => setHead(true)} spy={true} smooth={true}>Contact</Link></li>
-                    </ul>
-                </header>
-         </Container>
+            <header className="header" style={{ backgroundColor: `${colorChange ? 'white' : 'transparent'}` }}>
+                <a href="/" className="logo">Mohit</a>
+                <input className="menu-btn" type="checkbox" id="menu-btn" />
+                <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
+                <ul className="menu">
+                    <li><Link activeClass="active" to="/" onClick={() => animateScroll.scrollToTop()} spy={true} smooth={true}>Home</Link></li>
+                    <li><Link activeClass="active" to="about" onClick={() => setHead(true)} spy={true} smooth={true}>About</Link></li>
+                    <li><Link activeClass="active" to="skills" onClick={() => setHead(true)} spy={true} smooth={true}>Skills</Link></li>
+                    <li><Link activeClass="active" to="projects" onClick={() => setHead(true)} spy={true} smooth={true}>Projects</Link></li>
+                    <li><Link activeClass="active" to="contact" onClick={() => setHead(true)} spy={true} smooth={true}>Contact</Link></li>
+                    <li><div className='resumeBox'><a className='resume' href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
+                        Resume<DownloadIcon />
+                    </a></div></li>
+                </ul>
+            </header>
+        </Container>
     )
-    
 }
 
 const Container = styled.div`
@@ -106,6 +109,22 @@ const Container = styled.div`
     li a:hover{
         color:#01a479;
     }
+
+    .header li .resume{
+        width:80px;
+        padding:10px 20px;
+        border-radius:10px;
+        border:1px solid #01a479;
+        background:#01a479;
+        color:white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+        font-weight:bold;
+        margin-top:5px;
+    }
+
     
     
     /* menu icon */
@@ -156,7 +175,7 @@ const Container = styled.div`
  
     .header .menu-btn:checked ~ .menu {
         width:100%;
-        max-height: 300px;
+        max-height: 450px;
         background-color:white;
     }
     
@@ -179,7 +198,7 @@ const Container = styled.div`
     
     /* 48em = 768px */
     
-    @media (min-width: 55em) {
+    @media (min-width: 60em) {
         .header li {
             float: left;
         }
@@ -197,6 +216,58 @@ const Container = styled.div`
         .header .menu-icon {
             display: none;
         }
+       
+    }
+
+    @media only screen and (min-width: 769px) and (max-width:960px){
+        .header .menu {
+            font-size:small;
+        }
+
+        .resumeBox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:20px;
+        }
+    }
+    
+    @media only screen and (min-width: 481px) and (max-width:768px){
+        .resumeBox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:20px;
+        }
+    }
+
+    @media only screen and (min-width:320px) and (max-width:480px){
+        .resumeBox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:20px;
+        }
+    }
+
+    @media only screen and (max-width: 320px){
+        .resumeBox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:20px;
+        }
+
+    }
+
+    @media only screen and (max-width: 319px){
+        .resumeBox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:20px;
+        }
+
     }
 `
 

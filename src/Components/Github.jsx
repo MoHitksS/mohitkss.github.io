@@ -29,7 +29,7 @@ const Container = styled.div`
     flex-direction:column;
     border: 10px solid #01a479;
     border-radius:50px 5px 50px 5px;
-    padding:30px 0px 30px 0px;
+    padding:30px 10px 30px 10px;
 `
 
 const MainContainer = styled.div`
@@ -75,10 +75,6 @@ const MainContainer = styled.div`
         }
     }
 
-    
-    // @media (max-width: 50em){
-    //     display:none;
-    // }
 `
 
 export default Github
