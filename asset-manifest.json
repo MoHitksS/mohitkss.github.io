@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1945f43c.css",
-    "main.js": "/static/js/main.199c6596.js",
+    "main.js": "/static/js/main.4240cbfc.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/ESPN.jpeg": "/static/media/ESPN.46060bd016704b81b3ba.jpeg",
     "static/media/organic-market.jpeg": "/static/media/organic-market.322fe59db29d49064054.jpeg",
@@ -11,6 +11,7 @@
     "static/media/profilePic.jpg": "/static/media/profilePic.da6188a05f79e15ba9b6.jpg",
     "static/media/react.png": "/static/media/react.22d1f2096ed82cab7a8a.png",
     "static/media/mongodb.png": "/static/media/mongodb.4f7af09e6354d51beec8.png",
+    "static/media/Weather.jpeg": "/static/media/Weather.1ce5c95ba998eddb3b5e.jpeg",
     "static/media/backgroundHome.jpg": "/static/media/backgroundHome.1401f9c3ab9e0acab13c.jpg",
     "static/media/css3.png": "/static/media/css3.845e8eb63836bef093cf.png",
     "static/media/git.png": "/static/media/git.b1472a80b81e487179cf.png",
@@ -22,11 +23,11 @@
     "static/media/mern.png": "/static/media/mern.b58d81727b47466a7cda.png",
     "index.html": "/index.html",
     "main.1945f43c.css.map": "/static/css/main.1945f43c.css.map",
-    "main.199c6596.js.map": "/static/js/main.199c6596.js.map",
+    "main.4240cbfc.js.map": "/static/js/main.4240cbfc.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1945f43c.css",
-    "static/js/main.199c6596.js"
+    "static/js/main.4240cbfc.js"
   ]
 }
