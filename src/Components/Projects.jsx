@@ -4,13 +4,33 @@ import kfc from '../Resources/Images/Project/kfc.jpeg';
 import FitnessBlender from '../Resources/Images/Project/fitnessBlender.jpeg';
 import ESPN from '../Resources/Images/Project/ESPN.jpeg';
 import ZARA from '../Resources/Images/Project/zara.jpg';
+import ORGANICMARKET from '../Resources/Images/Project/organic-market.jpeg';
+import Weather from '../Resources/Images/Project/Weather.jpeg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import StreamIcon from '@mui/icons-material/Stream';
-import { useState } from 'react';
 
 const Projects = () => {
-    const [state, setState] = useState('')
     const projects = [
+        {
+            id: 6,
+            title: 'ORGANIC MARKET Clone',
+            img: ORGANICMARKET,
+            desc: 'The best online grocery store in India. bigbasket is an online supermarket for all your daily needs. Online shopping now made easy with a wide range of groceries and home needs.',
+            worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
+            githubLink: 'https://github.com/MoHitksS/organic-market',
+            deployedLink: 'https://organicmarket.netlify.app/',
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Chakra UI', 'Swiper', 'Mongoose', 'MongoDB']
+        },
+        {
+            id: 5,
+            title: 'Weather App',
+            img: Weather,
+            desc: 'Weather App has local and international weather forecasts from the most accurate weather forecasting technology featuring up to the weekly weather reports.',
+            worked: 'This is a individual project which is only created by me in 1 day.',
+            githubLink: 'https://github.com/MoHitksS/weather-app',
+            deployedLink: 'https://weather-app-ind.netlify.app/',
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Chakra UI']
+        },
         {
             id: 4,
             title: 'ZARA ORIGINS Clone',
@@ -22,16 +42,16 @@ const Projects = () => {
             tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Firebase']
         },
         {
-            id: 1,
-            title: 'KFC Clone',
-            img: kfc,
-            desc: 'KFC, a subsidiary of Yum! Brands, Inc. (NYSE: YUM.), is a global chicken restaurant brand with a rich, decades-long history of success and innovation.',
-            worked: 'A collaborative project, built in 5 days by a team of 5 developers.',
-            keyPoint2: 'Our food is always craveable. We are the original fried chicken experts, and everything we do celebrates our passion for serving finger lickin good food.',
-            keyPoint1: 'KFC stores are located in more than 105 countries and were first opened in 1930.',
-            githubLink: 'https://github.com/MoHitksS/KFC-india/',
-            deployedLink: 'https://kfc-online-india.netlify.app/',
-            tags: ['HTML', 'CSS', 'Javascript']
+            id: 3,
+            title: 'ESPNcrickInfo Clone',
+            img: ESPN,
+            desc: 'Find Live Cricket Scores, Match updates, Fixtures, Results, News, Articles, Video highlights only at ESPNcricinfo. Read Ball by Ball Commentary',
+            worked: 'This is a individual project which is only created by me in 4 days.',
+            keyPoint2: 'Find interactive analysis of cricket stats and records only on ESPNcricinfo.com.',
+            keyPoint1: 'ESPNcricinfo is available to cricket fans through the online media and on a host of mobile platforms and handheld devices.',
+            githubLink: 'https://github.com/MoHitksS/rugged-driving-9905',
+            deployedLink: 'https://espncrickinfoin.netlify.app/',
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Chakra UI']
         },
         {
             id: 2,
@@ -46,16 +66,16 @@ const Projects = () => {
             tags: ['HTML', 'CSS', 'Javascript']
         },
         {
-            id: 3,
-            title: 'ESPNcrickInfo Clone',
-            img: ESPN,
-            desc: 'Find Live Cricket Scores, Match updates, Fixtures, Results, News, Articles, Video highlights only at ESPNcricinfo. Read Ball by Ball Commentary',
-            worked: 'This is a individual project which is only created by me in 4 days.',
-            keyPoint2: 'Find interactive analysis of cricket stats and records only on ESPNcricinfo.com.',
-            keyPoint1: 'ESPNcricinfo is available to cricket fans through the online media and on a host of mobile platforms and handheld devices.',
-            githubLink: 'https://github.com/MoHitksS/rugged-driving-9905',
-            deployedLink: 'https://espncrickinfoin.netlify.app/',
-            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Chakra UI']
+            id: 1,
+            title: 'KFC Clone',
+            img: kfc,
+            desc: 'KFC, a subsidiary of Yum! Brands, Inc. (NYSE: YUM.), is a global chicken restaurant brand with a rich, decades-long history of success and innovation.',
+            worked: 'A collaborative project, built in 5 days by a team of 5 developers.',
+            keyPoint2: 'Our food is always craveable. We are the original fried chicken experts, and everything we do celebrates our passion for serving finger lickin good food.',
+            keyPoint1: 'KFC stores are located in more than 105 countries and were first opened in 1930.',
+            githubLink: 'https://github.com/MoHitksS/KFC-india/',
+            deployedLink: 'https://kfc-online-india.netlify.app/',
+            tags: ['HTML', 'CSS', 'Javascript']
         }
     ]
 
