@@ -5,6 +5,7 @@ import FitnessBlender from '../Resources/Images/Project/fitnessBlender.jpeg';
 import ESPN from '../Resources/Images/Project/ESPN.jpeg';
 import ZARA from '../Resources/Images/Project/zara.jpg';
 import ORGANICMARKET from '../Resources/Images/Project/organic-market.jpeg';
+import OMMEINDIA from '../Resources/Images/Project/Ommeindia.jpeg';
 import Weather from '../Resources/Images/Project/Weather.jpeg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import StreamIcon from '@mui/icons-material/Stream';
@@ -12,8 +13,17 @@ import StreamIcon from '@mui/icons-material/Stream';
 const Projects = () => {
     const projects = [
         {
+            id: 7,
+            title: 'Omme Electromech PVT.ltd',
+            img: OMMEINDIA,
+            desc: 'Omme Electromech Private Limited -  is a leading Exporter, Importer, Manufacturer, Supplier, Trading Company of Armature Testing Panel , Automatic Armature Testing Equipment, Armature Testing Equipment from Noida, Uttar Pradesh, India.',
+            worked: 'This is a individual project which is created by me in 1 month for my client.',
+            deployedLink: 'https://ommeindia.com/',
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Chakra UI', 'Multer', 'JWT', 'bcrypt', 'Swiper', 'Mongoose', 'MongoDB', 'Express', 'Node.js']
+        },
+        {
             id: 6,
-            title: 'ORGANIC MARKET Clone',
+            title: 'ORGANIC MARKET',
             img: ORGANICMARKET,
             desc: 'The best online grocery store in India. bigbasket is an online supermarket for all your daily needs. Online shopping now made easy with a wide range of groceries and home needs.',
             worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
@@ -98,8 +108,8 @@ const Projects = () => {
                                 ))}
                             </div>
                             <div className='linkSection'>
-                                <a href={ele.githubLink}><button><GitHubIcon />Github</button></a>
-                                <a href={ele.deployedLink}><button><StreamIcon />Live</button></a>
+                                {ele.githubLink && <a href={ele.githubLink} target='_blank' rel='noreferrer'><button><GitHubIcon />Github</button></a>}
+                                <a href={ele.deployedLink} target='_blank' rel='noreferrer'><button><StreamIcon />Live</button></a>
                             </div>
                         </div>
                     </div>
