@@ -27,7 +27,7 @@ const About = () => {
                     </div>
                     <div className='about_rightBox'>
                         <div>
-                            <img src={myImage} alt="" width='100%' />
+                            <img src={myImage} alt="profile-pic" width='100%' />
                         </div>
                     </div>
                 </div>
