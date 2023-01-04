@@ -29,7 +29,7 @@ const Projects = () => {
             worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
             githubLink: 'https://github.com/MoHitksS/organic-market',
             deployedLink: 'https://organicmarket.netlify.app/',
-            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Chakra UI', 'Swiper', 'Mongoose', 'MongoDB']
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Chakra UI', 'Multer', 'JWT', 'bcrypt', 'Swiper', 'Mongoose', 'MongoDB', 'Express', 'Node.js']
         },
         {
             id: 5,
