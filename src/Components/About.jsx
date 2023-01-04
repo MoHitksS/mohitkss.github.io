@@ -19,7 +19,7 @@ const About = () => {
                 <div className='aboutBox'>
                     <div className='about_leftBox'>
                         <h1>Hi, I'm Mohit Sharma.</h1>
-                        <p>I am Full Stack Web Developer and i have knowledge in HTML, CSS, JS, Mongodb, Express, REACT, Node.js and i make user-friendly websites.</p>
+                        <p>I am Full Stack Web Developer and i have knowledge in HTML, CSS, JS, Mongodb, Express, REACT, Node.js and make user-friendly websites.</p>
                         <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
                             <button>Download CV<DownloadIcon /></button>
                         </a>
