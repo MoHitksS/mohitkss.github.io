@@ -20,18 +20,7 @@ const Projects = () => {
             worked: 'This is a individual project which is created by me in 1 month for my client.',
             deployedLink: 'https://ommeindia.com/',
             tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Chakra UI', 'Multer', 'JWT', 'bcrypt', 'Swiper', 'Mongoose', 'MongoDB', 'Express', 'Node.js']
-        },
-        {
-            id: 6,
-            title: 'ORGANIC MARKET',
-            img: ORGANICMARKET,
-            desc: 'The best online grocery store in India. bigbasket is an online supermarket for all your daily needs. Online shopping now made easy with a wide range of groceries and home needs.',
-            worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
-            githubLink: 'https://github.com/MoHitksS/organic-market',
-            deployedLink: 'https://organicmarket.netlify.app/',
-            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Chakra UI', 'Multer', 'JWT', 'bcrypt', 'Swiper', 'Mongoose', 'MongoDB', 'Express', 'Node.js']
-        },
-        {
+        }, {
             id: 5,
             title: 'Weather App',
             img: Weather,
@@ -42,16 +31,15 @@ const Projects = () => {
             tags: ['HTML', 'CSS', 'Javascript', 'React', 'Chakra UI']
         },
         {
-            id: 4,
-            title: 'ZARA ORIGINS Clone',
-            img: ZARA,
-            desc: 'Latest trends in clothing for women, men & kids at ZARA online. Find new arrivals, fashion catalogs, collections & lookbooks every week.',
+            id: 6,
+            title: 'ORGANIC MARKET',
+            img: ORGANICMARKET,
+            desc: 'The best online grocery store in India. bigbasket is an online supermarket for all your daily needs. Online shopping now made easy with a wide range of groceries and home needs.',
             worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
-            githubLink: 'https://github.com/MoHitksS/green-value-83/',
-            deployedLink: 'https://zara-origins.netlify.app/',
-            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Firebase']
-        },
-        {
+            githubLink: 'https://github.com/MoHitksS/organic-market',
+            deployedLink: 'https://organicmarket.netlify.app/',
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Chakra UI', 'Multer', 'JWT', 'bcrypt', 'Swiper', 'Mongoose', 'MongoDB', 'Express', 'Node.js']
+        }, {
             id: 3,
             title: 'ESPNcrickInfo Clone',
             img: ESPN,
@@ -63,6 +51,18 @@ const Projects = () => {
             deployedLink: 'https://espncrickinfoin.netlify.app/',
             tags: ['HTML', 'CSS', 'Javascript', 'React', 'Chakra UI']
         },
+
+        {
+            id: 4,
+            title: 'ZARA ORIGINS Clone',
+            img: ZARA,
+            desc: 'Latest trends in clothing for women, men & kids at ZARA online. Find new arrivals, fashion catalogs, collections & lookbooks every week.',
+            worked: 'A collaborative project, built in 4 days by a team of 5 developers.',
+            githubLink: 'https://github.com/MoHitksS/green-value-83/',
+            deployedLink: 'https://zara-origins.netlify.app/',
+            tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Material UI', 'Firebase']
+        },
+
         {
             id: 2,
             title: 'Fitness Blender Clone',

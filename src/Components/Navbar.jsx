@@ -8,6 +8,7 @@ import { Link, animateScroll } from 'react-scroll'
 const Navbar = () => {
 
     const [colorChange, setColorchange] = useState(false);
+    const [active, setActive] = useState('home')
     const [head, setHead] = useState(false);
     const changeNavbarColor = () => {
         if (window.scrollY >= 80 || head) {
@@ -19,6 +20,8 @@ const Navbar = () => {
         }
 
     };
+
+    console.log(active);
     window.addEventListener('scroll', changeNavbarColor);
     useEffect(() => {
         if (head || colorChange) {
@@ -34,13 +37,28 @@ const Navbar = () => {
                 <input className="menu-btn" type="checkbox" id="menu-btn" />
                 <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
                 <ul className="menu">
-                    <li><Link activeClass="active" to="/" onClick={() => animateScroll.scrollToTop()} spy={true} smooth={true}>Home</Link></li>
-                    <li><Link activeClass="active" to="about" onClick={() => setHead(true)} spy={true} smooth={true}>About</Link></li>
-                    <li><Link activeClass="active" to="skills" onClick={() => setHead(true)} spy={true} smooth={true}>Skills</Link></li>
-                    <li><Link activeClass="active" to="projects" onClick={() => setHead(true)} spy={true} smooth={true}>Projects</Link></li>
-                    <li><Link activeClass="active" to="contact" onClick={() => setHead(true)} spy={true} smooth={true}>Contact</Link></li>
-                    <li><div className='resumeBox'><a className='resume' href="https://drive.google.com/file/d/1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR/view?usp=share_link" target='_blank' rel='noreferrer'>
-                        Resume<DownloadIcon />
+                    <li className={`${active === 'home' ? 'activeClass' : ''}`} ><Link activeClass="active" to="/" onClick={() => {
+                        animateScroll.scrollToTop()
+                        setActive('home')
+                    }} spy={true} smooth={true}>Home</Link></li>
+                    <li className={`${active === 'about' ? 'activeClass' : ''}`} ><Link activeClass="active" to="about" onClick={() => {
+                        setHead(true)
+                        setActive("about")
+                    }} spy={true} smooth={true}>About</Link></li>
+                    <li className={`${active === 'skills' ? 'activeClass' : ''}`}  ><Link activeClass="active" to="skills" onClick={() => {
+                        setHead(true)
+                        setActive("skills")
+                    }} spy={true} smooth={true}>Skills</Link></li>
+                    <li className={`${active === 'projects' ? 'activeClass' : ''}`}><Link activeClass="active" to="projects" onClick={() => {
+                        setHead(true)
+                        setActive("projects")
+                    }} spy={true} smooth={true}>Projects</Link></li>
+                    <li className={`${active === 'contact' ? 'activeClass' : ''}`} ><Link activeClass="active" to="contact" onClick={() => {
+                        setHead(true)
+                        setActive("contact")
+                    }} spy={true} smooth={true}>Contact</Link></li>
+                    <li onClick={() => setActive()}><div className='resumeBox'><a href="https://drive.google.com/file/d/1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR/view?usp=share_link" target='_blank' rel='noreferrer'>
+                        Resume
                     </a></div></li>
                 </ul>
             </header>
@@ -53,6 +71,20 @@ const Container = styled.div`
     height:70px;
     background-image: url(${backgroundImage});
 
+    .activeClass{
+        background: #01a479;
+        color:white;
+    }
+
+    .activeClass a{
+        background: #01a479;
+        color:white;
+    }
+
+    .activeClass a:hover{
+        color:white;
+    }
+
     a {
         color: #000;
     }
@@ -63,7 +95,7 @@ const Container = styled.div`
         position:fixed;
         width:100%;
         z-index: 3;
-        padding-top:10px;
+        padding-top:5px;
     }
     
     .header ul {
@@ -238,6 +270,10 @@ const Container = styled.div`
             justify-content:center;
             margin-bottom:20px;
         }
+
+        .header {
+            background: white !important;
+        }
     }
 
     @media only screen and (min-width:320px) and (max-width:480px){
@@ -246,6 +282,10 @@ const Container = styled.div`
             align-items:center;
             justify-content:center;
             margin-bottom:20px;
+        }
+
+        .header {
+            background: white !important;
         }
     }
 
@@ -257,6 +297,10 @@ const Container = styled.div`
             margin-bottom:20px;
         }
 
+        .header {
+            background: white !important;
+        }
+
     }
 
     @media only screen and (max-width: 319px){
@@ -265,6 +309,10 @@ const Container = styled.div`
             align-items:center;
             justify-content:center;
             margin-bottom:20px;
+        }
+
+        .header {
+            background: white !important;
         }
 
     }

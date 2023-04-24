@@ -1,4 +1,5 @@
 import DownloadIcon from '@mui/icons-material/Download';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import React from 'react'
 import styled from 'styled-components'
 import myImage from '../Resources/Images/profilePic.jpg'
@@ -19,10 +20,15 @@ const About = () => {
                 <div className='aboutBox'>
                     <div className='about_leftBox'>
                         <h1>Hi, I'm Mohit Sharma.</h1>
-                        <p>I am Full Stack Web Developer and i have knowledge in HTML, CSS, JS, Mongodb, Express, REACT, Node.js and make user-friendly websites.</p>
-                        <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
-                            <button>Download CV<DownloadIcon /></button>
-                        </a>
+                        <p>Passionate Full Stack Web Developer with 3 months of experience and certification in backend and frontend in the MERN stack. Seeking to contribute my skills and expertise in the company growth. Ability to work in team environment, emphasizing team goals.</p>
+                        <div className='resumesButton'>
+                            <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
+                                <button>Download Resume<DownloadIcon /></button>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR/view">
+                                <button>View Resume<VisibilityIcon /></button>
+                            </a>
+                        </div>
 
                     </div>
                     <div className='about_rightBox'>
@@ -66,8 +72,26 @@ const About = () => {
 
 const Container = styled.div`
     width:100%;
-    height:450px;
+    min-height:450px;
+    padding-top:20px;
     background-image: url(${backgroundImage});
+
+    .resumesButton{
+        width:100%;
+        display:flex;
+        gap:20px;
+    }
+
+    .resumesButton a button{
+        font-size: small;
+        height:40px;
+        cursor:pointer;
+    }
+
+    .resumesButton a button svg{
+        font-size: 17px;
+    }
+    
     a{
         text-decoration:none;
     }
@@ -98,7 +122,7 @@ const Container = styled.div`
     }
     
     .about_leftBox button{
-        padding:12px 20px 12px 20px;
+        padding:8px 12px 8px 12px;
         border-radius:10px;
         border:1px solid #01a479;
         background:#01a479;
@@ -139,7 +163,20 @@ const Container = styled.div`
     
 
     @media only screen and (min-width: 481px) and (max-width:768px){
-        height:450px;
+        min-height:450px;
+        padding-top:20px;
+
+        .resumesButton{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .resumesButton> a:last-child button{
+            width:165px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
         .aboutBox{
             height:100%;
             flex-direction:column-reverse;
@@ -184,10 +221,29 @@ const Container = styled.div`
             overflow:hidden;
         }
 
+        .resumesButton{
+            flex-direction:column;
+            align-items:center;
+        }
+
     }
 
     @media only screen and (min-width:320px) and (max-width:480px){
-        height:450px;
+        min-height:450px;
+        padding-top:20px;
+
+        .resumesButton{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .resumesButton> a:last-child button{
+            width:165px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
         .aboutBox{
             height:100%;
             flex-direction:column-reverse;
@@ -231,7 +287,8 @@ const Container = styled.div`
     }
 
     @media only screen and (max-width: 320px){
-        height:450px;
+        min-height:450px;
+        padding-top:20px;
         .aboutBox{
             height:100%;
             flex-direction:column-reverse;
@@ -275,7 +332,20 @@ const Container = styled.div`
 
 
     @media only screen and (max-width: 319px){
-        height:450px;
+        min-height:450px;
+        padding-top:20px;
+
+        .resumesButton{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .resumesButton> a:last-child button{
+            width:165px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
         .aboutBox{
             height:100%;
             flex-direction:column-reverse;
