@@ -3,29 +3,33 @@ import styled from 'styled-components'
 const Experience = () => {
     const compExperience = [
         {
-            companyName:'ChainCode Consulting LLP',
-            techStack:'HTML, CSS, Javascript, React, Redux, Multer, JWT, bcrypt, Swiper,Mongoose, MongoDB, Express.js, Node.js, Next.js, SQL',
-            areaOfResponsibility:"Worked On Frontend & Backend in NFT Project (POC)"
+            companyName: 'ChainCode Consulting LLP',
+            techStack: 'HTML, CSS, Javascript, React, Redux, Multer, JWT, bcrypt, Swiper,Mongoose, MongoDB, Express.js, Node.js, Next.js, SQL',
+            areaOfResponsibility: "Worked On Frontend & Backend in NFT Project (POC)",
+            role: 'Full Stack Developer',
+            duration: '3 Months'
         },
-        
+
     ]
 
-  return (
-    <Container id='skills'>
-        <h1>Experience</h1>
-        <div className='skillsContainer'>
-            {compExperience.map((ele,index)=>(
-                <div key={index}>
-                    <p className='companyName'>{ele.companyName}</p>
-                    <div className='techStackSec'>
-                    <p>Tech Stack: <span>{ele.techStack}</span></p>
-                    <p>Area of responsibility: <span>{ele.areaOfResponsibility}</span></p>
+    return (
+        <Container id='skills'>
+            <h1>Experience</h1>
+            <div className='skillsContainer'>
+                {compExperience.map((ele, index) => (
+                    <div key={index}>
+                        <p className='companyName'>{ele.companyName}</p>
+                        <div className='techStackSec'>
+                            <p>Role: <span>{ele.role}</span></p>
+                            <p>Duration: <span>{ele.duration}</span></p>
+                            <p>Tech Stack: <span>{ele.techStack}</span></p>
+                            <p>Area of responsibility: <span>{ele.areaOfResponsibility}</span></p>
+                        </div>
                     </div>
-                </div>
-            ))}
-        </div>
-    </Container>
-  )
+                ))}
+            </div>
+        </Container>
+    )
 }
 
 const Container = styled.div`
