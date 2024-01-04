@@ -22,10 +22,10 @@ const About = () => {
                         <h1>Hi, I'm Mohit Sharma.</h1>
                         <p>Passionate Full Stack Web Developer with 3 months of experience and certification in backend and frontend in the MERN stack. Seeking to contribute my skills and expertise in the company growth. Ability to work in team environment, emphasizing team goals.</p>
                         <div className='resumesButton'>
-                            <a href="https://drive.google.com/uc?export=download&id=1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR">
+                            <a href="https://drive.google.com/uc?export=download&id=1DPH7AKY5VLXTbUZu8spy5jxIzPkXBsIe">
                                 <button>Download Resume<DownloadIcon /></button>
                             </a>
-                            <a href="https://drive.google.com/file/d/1Tr4JaRtllSROzZWTEwdR4aAUXlfb5CLR/view">
+                            <a href="https://drive.google.com/file/d/1DPH7AKY5VLXTbUZu8spy5jxIzPkXBsIe/view">
                                 <button>View Resume<VisibilityIcon /></button>
                             </a>
                         </div>
