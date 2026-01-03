@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.1945f43c.css",
-    "main.js": "/static/js/main.0884571a.js",
-    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "main.css": "/static/css/main.3726d40b.css",
+    "main.js": "/static/js/main.aa14c96c.js",
+    "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
     "static/media/ESPN.jpeg": "/static/media/ESPN.46060bd016704b81b3ba.jpeg",
     "static/media/organic-market.jpeg": "/static/media/organic-market.322fe59db29d49064054.jpeg",
     "static/media/fitnessBlender.jpeg": "/static/media/fitnessBlender.35dac085bbfdb3b51f2c.jpeg",
@@ -23,12 +23,12 @@
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/mern.png": "/static/media/mern.b58d81727b47466a7cda.png",
     "index.html": "/index.html",
-    "main.1945f43c.css.map": "/static/css/main.1945f43c.css.map",
-    "main.0884571a.js.map": "/static/js/main.0884571a.js.map",
-    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+    "main.3726d40b.css.map": "/static/css/main.3726d40b.css.map",
+    "main.aa14c96c.js.map": "/static/js/main.aa14c96c.js.map",
+    "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1945f43c.css",
-    "static/js/main.0884571a.js"
+    "static/css/main.3726d40b.css",
+    "static/js/main.aa14c96c.js"
   ]
 }
